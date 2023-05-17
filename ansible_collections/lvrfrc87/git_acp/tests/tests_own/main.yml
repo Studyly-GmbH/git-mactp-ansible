@@ -1,0 +1,20 @@
+---
+- name: Prepare Deploy
+  hosts: localhost
+  connection: local
+
+  collections:
+    - lvrfrc87.git_acp
+
+  tasks:
+  - name: Create test.txt
+    shell: "touch $HOME/Projects/test-automatic-deploy/test.txt"
+
+  - name: ADD and PUSH test.txt VIA SSH.
+    git_acp:
+      path: "$HOME/Projects/test-automatic-deploy/"
+      branch: "BRANCH-2"
+      comment: "Add test.txt."
+      add: [ "." ]
+      url: "git@github.com:Studyly-GmbH/test-automatic-deploy.git"
+  

@@ -241,7 +241,7 @@ def main():
         comment=dict(default=None, type="str"),
         add=dict(default=".", type="list", elements="str"),
         ssh_params=dict(default=None, type="dict", required=False),
-        branch=dict(default="main"),
+        branch=dict(default="development"),
         pull=dict(default=False, type="bool"),
         pull_options=dict(default=["--no-edit"], type="list", elements="str"),
         push=dict(default=True, type="bool"),
