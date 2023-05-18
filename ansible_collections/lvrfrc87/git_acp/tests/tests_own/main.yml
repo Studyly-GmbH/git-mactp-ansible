@@ -17,4 +17,11 @@
       comment: "Add test.txt."
       add: [ "." ]
       url: "git@github.com:Studyly-GmbH/test-automatic-deploy.git"
-  
+
+  - name: TAG CURRENT STATE AND PUSH TO REMOTE
+    git_acp:
+      path: "$HOME/Projects/test-automatic-deploy/"
+      url: "git@github.com:Studyly-GmbH/test-automatic-deploy.git"
+      branch: "BRANCH-2"
+      tag: "v3.30.0"
+      push_tags: True
